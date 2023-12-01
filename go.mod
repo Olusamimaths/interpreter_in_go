@@ -1,3 +1,3 @@
-module github.com/olusamimaths/interpreter_in_go
+module monkey
 
 go 1.21.4

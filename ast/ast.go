@@ -28,6 +28,16 @@ func (p *Program) TokenLiteral() string {
 	}
 }
 
+type ReturnStatement struct {
+	Token       token.Token // the 'return' Token
+	ReturnValue Expression
+}
+
+func (rs *ReturnStatement) statementNode() {}
+func (rs *ReturnStatement) TokenLiteral() string {
+	return rs.Token.Literal
+}
+
 type LetStatment struct {
 	Token token.Token // the token.LET Token
 	Name  *Identifier

@@ -41,9 +41,9 @@ func TestReturnStatements(t *testing.T) {
 
 func TestLetStatements(t *testing.T) {
 	input := `
-  let x 5;
-  let = 10;
-  let 838383;
+  let x = 5;
+  let y = 10;
+  let foobar = 838383;
   `
 	l := lexer.New(input)
 	p := New(l)

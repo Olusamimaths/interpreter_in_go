@@ -67,18 +67,18 @@ func (rs *ReturnStatement) String() string {
 	return out.String()
 }
 
-type LetStatment struct {
+type LetStatement struct {
 	Token token.Token // the token.LET Token
 	Name  *Identifier
 	Value Expression
 }
 
-func (ls *LetStatment) statementNode() {}
-func (ls *LetStatment) TokenLiteral() string {
+func (ls *LetStatement) statementNode() {}
+func (ls *LetStatement) TokenLiteral() string {
 	return ls.Token.Literal
 }
 
-func (ls *LetStatment) String() string {
+func (ls *LetStatement) String() string {
 	var out bytes.Buffer
 
 	out.WriteString(ls.TokenLiteral() + " ")

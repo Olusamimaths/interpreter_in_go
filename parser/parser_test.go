@@ -45,7 +45,7 @@ func TestParsingPrefixExpressions(t *testing.T) {
 			t.Fatalf("stmt is nt ast.PrefixExpression. got=%T", stmt.Expression)
 		}
 		if exp.Operator != tt.operator {
-			t.Fatalf("exp.Operator is not '%s'. got=%s", tt.operator, exp.operator)
+			t.Fatalf("exp.Operator is not '%s'. got=%s", tt.operator, exp.Operator)
 		}
 		if !testIntegerLiteral(t, exp.Right, tt.integerValue) {
 			return
